@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Enviar orçamento · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="17">
+<div class="page">
+  <div class="card card-form" style="width:460px;">
+    <div class="back-row"><a class="icon-btn" href="14-detalhes-solicitacao-tecnico.html" aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></a><h1 class="title-md">Enviar orçamento</h1></div>
+    <div class="list-row" style="background:var(--cinza-gelo);margin-bottom:16px;">
+      <div class="list-row-icon"><span class="material-symbols-outlined" id="q-icon">build</span></div>
+      <div class="list-row-main"><p class="list-row-title" id="q-title">Solicitação</p><p class="list-row-sub" id="q-sub">—</p></div>
+    </div>
+    <div class="field"><label class="field-label">Diagnóstico</label><div class="field-input textarea"><textarea id="q-diag" placeholder="Descreva o problema encontrado e o que será feito"></textarea></div></div>
+    <div class="field"><label class="field-label">Valor da peça (R$)</label><div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">memory</span></span><input type="text" inputmode="numeric" id="q-peca" placeholder="R$ 0,00" autocomplete="off"></div></div>
+    <div class="field"><label class="field-label">Mão de obra (R$)</label><div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">engineering</span></span><input type="text" inputmode="numeric" id="q-mao" placeholder="R$ 0,00" autocomplete="off"></div></div>
+    <div class="field"><label class="field-label">Prazo estimado (dias úteis)</label><div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">calendar_month</span></span><input type="number" id="q-prazo" min="1" max="365" step="1" inputmode="numeric" placeholder="Ex: 3"></div></div>
+    <div class="detail-box"><div class="detail-row" style="margin-bottom:0;"><span style="font-size:14px;font-weight:500;">Total</span><span style="font-size:18px;font-weight:600;" id="q-total">R$ 0,00</span></div></div>
+    <div class="btn-row">
+      <a class="btn btn-outline" href="14-detalhes-solicitacao-tecnico.html">Cancelar</a>
+      <a class="btn btn-primary" style="flex:2;" href="#" data-action="sendquote">Enviar orçamento</a>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

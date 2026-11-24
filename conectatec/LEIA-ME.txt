@@ -1,0 +1,29 @@
+ConectaTec - atualização (exclusão, cadastro completo, cartão, correções)
+
+ARQUIVOS ALTERADOS (substitua os da sua pasta):
+  server/index.js, server/schema.sql, server/.env.example, server/.gitignore
+  app.js, style.css
+  02-cadastro.html, 07-detalhes-atendimento.html, 14-detalhes-solicitacao-tecnico.html
+  16-perfil-edicao-tecnico.html, 17-enviar-orcamento.html, 18-pagamento.html
+
+NÃO PRECISA: npm install, mexer no .env, rodar SQL. O servidor atualiza o banco
+sozinho ao iniciar (tabela request_hidden, forma "Cartão" e coluna de parcelas).
+
+COMO ATUALIZAR:
+  1. Faça backup da pasta.
+  2. Copie os arquivos por cima (NÃO copie o .env nem o node_modules).
+  3. No terminal do servidor: Ctrl+C para parar, depois npm start (dentro de server/).
+  4. No navegador: Ctrl+F5.
+
+O QUE MUDOU:
+  - Login travava ("Não foi possível completar a operação"): o limite de tentativas
+    contava cada página aberta. Agora só conta login/cadastro que FALHAM.
+    Sessão agora dura 8 horas e renova a cada uso.
+  - Perfil (cliente e técnico) vinha com os campos vazios: corrigido.
+  - Botão "Excluir solicitação" para cliente e técnico.
+  - Cadastro pede telefone e endereço; técnico também sobre, especialidades e dias.
+    Técnico agora também edita telefone e endereço no perfil.
+  - Valor do serviço vira R$ automaticamente; prazo em dias com setinhas (1 a 365).
+  - Pagamento com Cartão em até 12x (apenas registro, sem cobrança real).
+
+Parar o servidor: no terminal, Ctrl+C.

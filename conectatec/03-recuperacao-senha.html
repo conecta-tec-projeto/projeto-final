@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Recuperação de senha · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="03">
+<div class="auth">
+  <aside class="auth-brand">
+    <div class="brand-row" aria-label="ConectaTec"><img class="logo-mark" src="assets/img/icone-escuro.png" alt=""><span class="brand-name">Conecta<span>Tec</span></span></div>
+    <div>
+      <h2 class="auth-headline">Encontre quem <span class="accent">resolve.</span></h2>
+      <p class="auth-text">Conecte-se a técnicos especializados e acompanhe todo o atendimento em um só lugar!</p>
+    </div>
+  </aside>
+  <main class="auth-main">
+  <div class="card card-form">
+
+    <div class="avatar" style="width:48px;height:48px;background:#F4F0FE;margin-bottom:18px;"><span class="material-symbols-outlined">key</span></div>
+
+    <h1 class="title-lg" style="font-size:22px;">Esqueceu sua senha?</h1>
+    <p class="subtitle">Informe seu e-mail cadastrado e enviaremos um link para você criar uma nova senha.</p>
+
+    <div class="field">
+      <label class="field-label">E-mail</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">mail</span></span><input type="email" id="email" placeholder="nome@email.com"></div>
+    </div>
+
+    <button data-action="recover" class="btn btn-primary" style="margin-bottom:18px;">Enviar link de recuperação</button>
+
+    <p class="link-center"><a class="link" href="01-login.html"><span class="material-symbols-outlined">arrow_back</span> Voltar ao login</a></p>
+  </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

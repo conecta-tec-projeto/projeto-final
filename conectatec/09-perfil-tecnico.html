@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Perfil do técnico · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="09">
+<div class="page">
+  <div class="card card-form">
+    <div class="back-row"><a class="icon-btn" href="07-detalhes-atendimento.html" aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></a><h1 class="title-md">Perfil do técnico</h1></div>
+
+    <div style="text-align:center;margin-bottom:20px;">
+      <div class="avatar avatar-lg" style="margin:0 auto 10px;" id="p-ini">?</div>
+      <p style="font-size:17px;font-weight:500;margin:0;" id="p-name">Nome do técnico</p>
+      <p style="font-size:13px;color:var(--roxo-profundo);margin-top:4px;"><span class="material-symbols-outlined">star</span> Sem avaliações ainda</p>
+    </div>
+
+    <p class="field-label">Especialidades</p>
+    <div class="tag-row" id="p-tags"><p class="subtitle" style="margin:0;">Nenhuma especialidade informada.</p></div>
+
+    <p class="field-label">Sobre</p>
+    <p class="subtitle" id="p-about">Este técnico ainda não preencheu a descrição.</p>
+
+    <p class="field-label">Trabalhos realizados</p>
+    <p class="subtitle">Nenhum trabalho publicado ainda.</p>
+
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="11-chat.html">Mensagem</a>
+      <a class="btn btn-primary" href="05-nova-solicitacao.html">Enviar solicitação</a>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

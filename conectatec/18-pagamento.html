@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Pagamento · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="18">
+<div class="page">
+  <div class="card card-form" style="width:460px;">
+    <div class="back-row"><a class="icon-btn" href="08-orcamento.html" aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></a><h1 class="title-md">Pagamento</h1></div>
+    <div class="list-row" style="background:var(--cinza-gelo);margin-bottom:16px;">
+      <div class="list-row-icon"><span class="material-symbols-outlined" id="y-icon">build</span></div>
+      <div class="list-row-main"><p class="list-row-title" id="y-title">Atendimento</p><p class="list-row-sub" id="y-sub">—</p></div>
+    </div>
+    <div class="detail-box">
+      <div class="detail-row"><span class="detail-label">Peça</span><span class="detail-value" id="y-peca">—</span></div>
+      <div class="detail-row"><span class="detail-label">Mão de obra</span><span class="detail-value" id="y-mao">—</span></div>
+      <div class="detail-row" style="margin-bottom:12px;"><span class="detail-label">Prazo estimado</span><span class="detail-value" id="y-prazo">—</span></div>
+      <hr style="border:none;border-top:1px solid var(--borda);margin-bottom:12px;">
+      <div class="detail-row" style="margin-bottom:0;"><span style="font-size:14px;font-weight:500;">Total</span><span style="font-size:18px;font-weight:600;" id="y-total">R$ 0,00</span></div>
+    </div>
+    <p class="field-label">Forma de pagamento</p>
+    <div class="choice-grid" id="pay-methods">
+      <div class="choice-card selected" data-m="pix"><span class="material-symbols-outlined">qr_code_2</span><p class="choice-title">Pix</p></div>
+      <div class="choice-card" data-m="dinheiro"><span class="material-symbols-outlined">payments</span><p class="choice-title">Dinheiro</p></div>
+      <div class="choice-card" data-m="transferencia"><span class="material-symbols-outlined">account_balance</span><p class="choice-title">Transferência</p></div>
+      <div class="choice-card" data-m="cartao"><span class="material-symbols-outlined">credit_card</span><p class="choice-title">Cartão</p></div>
+    </div>
+    <div class="field" id="card-box" hidden>
+      <label class="field-label" for="parcelas">Parcelas</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">credit_score</span></span><select id="parcelas"><option value="1">1x</option></select></div>
+    </div>
+    <p class="subtitle">A plataforma apenas registra a forma de pagamento combinada (e as parcelas, no cartão). Não realiza cobranças nem solicita dados do cartão ou bancários.</p>
+    <a class="btn btn-primary" href="#" data-action="pay" id="pay-btn">Pagar</a>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

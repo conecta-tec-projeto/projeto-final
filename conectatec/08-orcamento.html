@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Orçamento · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="08">
+<div class="page">
+  <div class="card card-form">
+    <div class="back-row"><a class="icon-btn" href="07-detalhes-atendimento.html" aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></a><h1 class="title-md">Orçamento recebido</h1></div>
+
+    <div class="list-row" style="background:var(--roxo-claro-bg);margin-bottom:18px;">
+      <div class="avatar avatar-sm" style="background:var(--branco);" id="q-ini">?</div>
+      <div class="list-row-main"><p class="list-row-title" id="q-tec">Nenhum técnico ainda</p><p class="list-row-sub" id="q-sub">Você ainda não recebeu orçamentos</p></div>
+    </div>
+
+    <div class="detail-box">
+      <p class="field-label">Diagnóstico</p>
+      <p class="subtitle" style="margin-bottom:16px;" id="q-diag">—</p>
+      <div class="detail-row"><span class="detail-label">Peça</span><span class="detail-value" id="q-peca">—</span></div>
+      <div class="detail-row"><span class="detail-label">Mão de obra</span><span class="detail-value" id="q-mao">—</span></div>
+      <div class="detail-row" style="margin-bottom:12px;"><span class="detail-label">Prazo estimado</span><span class="detail-value" id="q-prazo">—</span></div>
+      <hr style="border:none;border-top:1px solid var(--borda);margin-bottom:12px;">
+      <div class="detail-row" style="margin-bottom:0;"><span style="font-size:14px;font-weight:500;">Total</span><span style="font-size:18px;font-weight:600;" id="q-total">R$ 0,00</span></div>
+    </div>
+
+    <div style="background:var(--amarelo-bg);border-radius:10px;padding:10px 14px;margin-bottom:20px;">
+      <p style="font-size:12px;color:var(--amarelo-tx);margin:0;">Se você recusar, o chamado volta a ficar disponível para novas propostas.</p>
+    </div>
+
+    <div class="btn-row is-disabled">
+      <a data-action="declinequote" class="btn btn-danger" href="06-minhas-solicitacoes.html">Recusar</a>
+      <a data-action="acceptquote" class="btn btn-primary" href="18-pagamento.html">Aceitar orçamento</a>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

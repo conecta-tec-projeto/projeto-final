@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Meus atendimentos · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="15">
+<div class="page page-full">
+  <div class="app-shell" style="width:100%;">
+    <nav class="sidebar" aria-label="Navegação principal">
+      <a class="sidebar-logo" href="12-dashboard-tecnico.html" aria-label="ConectaTec"><img class="logo-mark" src="assets/img/icone-escuro.png" alt="ConectaTec"></a>
+      <button type="button" class="sidebar-toggle" aria-label="Expandir menu" aria-expanded="false" title="Expandir menu"><span class="material-symbols-outlined" aria-hidden="true">menu_open</span><span class="sidebar-toggle-text">Menu</span></button><div class="sidebar-nav">
+      <a class="sidebar-link" href="12-dashboard-tecnico.html" title="Início" aria-label="Início"><span class="material-symbols-outlined">home</span><span class="sidebar-label">Início</span></a>
+      <a class="sidebar-link" href="13-solicitacoes-disponiveis.html" title="Solicitações disponíveis" aria-label="Solicitações disponíveis"><span class="material-symbols-outlined">search</span><span class="sidebar-label">Solicitações disponíveis</span></a>
+      <a class="sidebar-link active" href="15-meus-atendimentos-tecnico.html" title="Meus atendimentos" aria-label="Meus atendimentos"><span class="material-symbols-outlined">build</span><span class="sidebar-label">Meus atendimentos</span></a>
+      <a class="sidebar-link" href="16-perfil-edicao-tecnico.html" title="Meu perfil" aria-label="Meu perfil"><span class="material-symbols-outlined">person</span><span class="sidebar-label">Meu perfil</span></a>
+      </div>
+    </nav>
+    <div class="main">
+    <h1 class="title-md" style="margin-bottom:16px;">Meus atendimentos</h1>
+
+    <div class="tab-row" id="tabs">
+      <span class="tab active">Todos</span>
+      <span class="tab">Em andamento</span>
+      <span class="tab">Concluídos</span>
+    </div>
+
+    <div class="list" id="list"></div>
+    </div>
+  </div>
+</div>
+<script src="navigation.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

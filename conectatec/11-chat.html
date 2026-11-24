@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Chat · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="11">
+<div class="page">
+  <div class="card chat-card">
+    <div class="chat-header">
+      <a class="icon-btn" href="07-detalhes-atendimento.html" aria-label="Voltar" style="color:var(--branco);"><span class="material-symbols-outlined">arrow_back</span></a>
+      <div class="avatar avatar-sm" id="c-ini">?</div>
+      <div style="flex:1;">
+        <p class="chat-name" id="c-name">Conversa</p>
+        <p class="chat-status" id="c-sub"></p>
+      </div>
+      <span class="icon-btn" style="color:var(--branco);"><span class="material-symbols-outlined">more_vert</span></span>
+    </div>
+
+    <div class="chat-body" id="chat"></div>
+
+    <div class="chat-input-row">
+      <span class="icon-btn"><span class="material-symbols-outlined">attach_file</span></span>
+      <input class="chat-input" id="msg" placeholder="Digite sua mensagem..." autocomplete="off">
+      <button class="send-btn" data-action="send" aria-label="Enviar" style="border:none;cursor:pointer;"><span class="material-symbols-outlined">send</span></button>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=JSON.parse(localStorage.getItem("ct_theme"));if(!t&&matchMedia("(prefers-color-scheme: dark)").matches)t="escuro";document.documentElement.dataset.theme=t||"claro"}catch(e){}</script>
+<title>Cadastro · ConectaTec</title>
+<link rel="icon" href="assets/img/icone-escuro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="02">
+<div class="auth">
+  <aside class="auth-brand">
+    <div class="brand-row" aria-label="ConectaTec"><img class="logo-mark" src="assets/img/icone-escuro.png" alt=""><span class="brand-name">Conecta<span>Tec</span></span></div>
+    <div>
+      <h2 class="auth-headline">Encontre quem <span class="accent">resolve.</span></h2>
+      <p class="auth-text">Conecte-se a técnicos especializados e acompanhe todo o atendimento em um só lugar!</p>
+    </div>
+  </aside>
+  <main class="auth-main">
+  <div class="card card-form" style="width:420px;">
+
+    <h1 class="title-lg">Criar sua conta</h1>
+    <p class="subtitle">Leva menos de um minuto</p>
+
+    <p class="field-label">Você é:</p>
+    <div class="choice-grid">
+      <div class="choice-card selected" data-role="cliente">
+        <div><span class="material-symbols-outlined">person</span></div>
+        <p class="choice-title">Cliente</p>
+        <p class="choice-sub">quero assistência</p>
+      </div>
+      <div class="choice-card" data-role="tecnico">
+        <div><span class="material-symbols-outlined">build</span></div>
+        <p class="choice-title">Técnico</p>
+        <p class="choice-sub">quero atender</p>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label">Nome completo</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">person</span></span><input type="text" id="nome" placeholder="Seu nome" autocomplete="name"></div>
+    </div>
+    <div class="field">
+      <label class="field-label">E-mail</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">mail</span></span><input type="email" id="email" placeholder="nome@email.com" autocomplete="email"></div>
+    </div>
+    <div class="field">
+      <label class="field-label" for="telefone">Telefone</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">call</span></span><input type="text" id="telefone" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel"></div>
+    </div>
+    <div class="field">
+      <label class="field-label" for="endereco">Endereço</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">location_on</span></span><input type="text" id="endereco" placeholder="Cidade, Estado" autocomplete="address-level2"></div>
+    </div>
+    <div id="tech-fields" hidden>
+      <div class="field">
+        <label class="field-label" for="sobre">Sobre você</label>
+        <div class="field-input textarea"><textarea id="sobre" placeholder="Conte sua experiência"></textarea></div>
+      </div>
+      <div class="field">
+        <label class="field-label" for="especialidades">Especialidades</label>
+        <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">build</span></span><input type="text" id="especialidades" placeholder="Ex: notebook, celular, impressora"></div>
+        <p class="field-hint">Separe por vírgula</p>
+      </div>
+      <p class="field-label">Disponibilidade</p>
+      <div class="days-grid" id="days">
+        <div class="day-pill inactive" style="cursor:pointer">Seg</div>
+        <div class="day-pill inactive" style="cursor:pointer">Ter</div>
+        <div class="day-pill inactive" style="cursor:pointer">Qua</div>
+        <div class="day-pill inactive" style="cursor:pointer">Qui</div>
+        <div class="day-pill inactive" style="cursor:pointer">Sex</div>
+        <div class="day-pill inactive" style="cursor:pointer">Sáb</div>
+        <div class="day-pill inactive" style="cursor:pointer">Dom</div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="field-label">Senha</label>
+      <div class="field-input"><span class="field-icon"><span class="material-symbols-outlined">lock</span></span><input type="password" id="senha" placeholder="Mínimo de 8 caracteres" autocomplete="new-password"></div>
+    </div>
+
+    <a data-action="signup" class="btn btn-primary" style="margin-bottom:18px;" href="04-dashboard-cliente.html">Criar conta</a>
+
+    <p class="link-center">Já tem uma conta? <a class="link" href="01-login.html">Entrar</a></p>
+  </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
